@@ -1,4 +1,4 @@
-const express = require("express");
+import express from "express";
 const app = express();
 
 const PORT = 8000;
@@ -6,15 +6,10 @@ const PORT = 8000;
 app.get("/", (req, res) => {
   res.send("<h1>this is my first app</h1>");
 });
+//load rrouter
+import taskRouter from "./src/routers/taskRouter.js";
 //task api
-const taskFunc = (req, res) => {
-  res.json({ message: "added the task to the database" });
-};
-app.get("/api/v1/task", taskFunc);
-
-app.post("/api/v1/task", (req, res) => {
-  res.send("posting the data");
-});
+app.use("/api/v1/task/", taskRouter);
 
 app.listen(PORT, (error) => {
   if (error) {
