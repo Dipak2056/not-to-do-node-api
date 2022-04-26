@@ -7,8 +7,10 @@ router.get("/", (req, res) => {
   });
 });
 router.post("/", (req, res) => {
+  const data = req.body;
   res.json({
     message: "post method",
+    data,
   });
 });
 router.delete("/", (req, res) => {
