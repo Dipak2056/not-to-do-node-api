@@ -4,12 +4,15 @@ This is a not tot do list API. This API is created for not to do react applicati
 
 ## APIS
 
-1. Task api endpoint
-   all the task api will follow format `{rooturl}/api/v1/task`
+### Task API
 
-2. User api endpoint
-   all the user api will follow format `{rooturl}/api/v1/user`
+all the task api will follow format `{rooturl}/api/v1/task`
+| # | Method | path | Description |
+| -- | --- | ---- | --- |
+| 1 | `GET` | `/` | Get all tasks |
+| 2 | `POST` | `/` | Send a task obj to store in the database |
+| 3 | `DELETE` | `/{taskId}` | Delete a specific task |
 
-//database connection first
-//table schema
-//query over table/schema
+### User API
+
+all the user api will follow format `{rooturl}/api/v1/user`
