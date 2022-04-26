@@ -3,6 +3,9 @@ const app = express();
 
 const PORT = 8000;
 app.use(express.json()); //using middle ware
+//mongo connection
+import mongoClient from "./src/config/db.js";
+mongoClient();
 
 app.get("", (req, res) => {
   res.send("hello world");
