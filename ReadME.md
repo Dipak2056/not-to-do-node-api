@@ -12,6 +12,7 @@ all the task api will follow format `{rooturl}/api/v1/task`
 | 1 | `GET` | `/` | Get all tasks |
 | 2 | `POST` | `/` | Send a task obj to store in the database |
 | 3 | `DELETE` | `/{taskId}` | Delete a specific task |
+| 4 | `PATCH` | `/` | Update a task name |
 
 ### User API
 

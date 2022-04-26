@@ -5,6 +5,8 @@ import {
   getAllTask,
   insertTask,
   getTask,
+  deleteTask,
+  updateTask,
 } from "../models/task/TaskList.model.js";
 
 router.post("/", async (req, res) => {
@@ -23,10 +25,30 @@ router.get("/:_id?", async (req, res) => {
     result,
   });
 });
+router.patch("/", async (req, res) => {
+  try {
+    const result = await updateTask(req.body);
+    console.log(result);
+    res.json({
+      status: "Succes",
+      message: "Data is updated successfull",
+      result,
+    });
+  } catch (error) {
+    res.json({
+      status: "error",
+      message: error.message,
+    });
+  }
+});
 
-router.delete("/", (req, res) => {
+router.delete("/:_id", async (req, res) => {
+  const { _id } = req.params;
+  console.log(_id);
+  const result = await deleteTask(_id);
   res.json({
-    message: "delete method",
+    status: "delete method execujted successfully",
+    result,
   });
 });
 
