@@ -9,3 +9,7 @@ This is a not tot do list API. This API is created for not to do react applicati
 
 2. User api endpoint
    all the user api will follow format `{rooturl}/api/v1/user`
+
+//database connection first
+//table schema
+//query over table/schema

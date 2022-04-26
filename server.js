@@ -3,6 +3,7 @@ const app = express();
 
 const PORT = 8000;
 app.use(express.json()); //using middle ware
+
 app.get("", (req, res) => {
   res.send("hello world");
 });
