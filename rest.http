@@ -1,7 +1,7 @@
 ### get the request from server
 GET http://localhost:8000
-### get request
-GET http://localhost:8000/api/v1/task
+### get single or all  request
+GET http://localhost:8000/api/v1/task/626752aa0ea1c2d8b19467d7
 
 ### get task fromserver
 POST http://localhost:8000/api/v1/task
