@@ -7,7 +7,7 @@ GET http://localhost:8000/api/v1/task/
 POST http://localhost:8000/api/v1/task
 Content-Type: application/json
 
-{"task":"coding","hr":"15"}
+{"task":"coding","hr":"15","userId":"6278729feafc7e9be0d91870"}
 ### Updating the data
 PATCH  http://localhost:8000/api/v1/task/
 Content-Type: application/json
