@@ -19,3 +19,24 @@ Content-Type: application/json
 
 ### post task to server
 DELETE   http://localhost:8000/api/v1/task/626752aa0ea1c2d8b19467d7
+
+
+### user api zone
+###get user
+GET  http://localhost:8000/api/v1/user
+Content-Type: application/json
+
+{
+    "name":"Dipak",
+    "email":"paudelsantosh508@gmail.com"
+}
+###create user
+POST http://localhost:8000/api/v1/user
+Content-Type: application/json
+
+{
+    "name":"Dipaasdffkasd",
+    "email":"paudasdfelsantosasdh508@gmail.com"
+}
+###delete user
+DELETE http://localhost:8000/api/v1/user/627872a6eafc7e9be0d91872

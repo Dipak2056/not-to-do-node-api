@@ -10,9 +10,30 @@ import {
 } from "../models/task/TaskList.model.js";
 
 router.post("/", async (req, res) => {
-  const data = req.body;
-  const result = await insertTask(data);
-  console.log(result);
+  try {
+    const data = req.body;
+    console.log(data, "kljljlkjljl");
+    const result = await insertTask(data);
+
+    if (result?._id) {
+      return res.json({
+        status: "success",
+        message: "status successfull",
+      });
+    }
+
+    console.log(result);
+    res.json({
+      status: "error",
+      message: "unable to access the data please try again letter",
+    });
+  } catch (error) {
+    console.log(error.message);
+    res.json({
+      status: "error",
+      message: "unable to access the data please try again letter",
+    });
+  }
 });
 router.get("/:_id?", async (req, res) => {
   const { _id } = req.params;
@@ -42,9 +63,9 @@ router.patch("/", async (req, res) => {
   }
 });
 
-router.delete("/:_id", async (req, res) => {
-  const { _id } = req.params;
-  console.log(_id);
+router.delete("/:userId", async (req, res) => {
+  const { userId } = req.params;
+  console.log(req.body);
   const result = await deleteTask(_id);
   res.json({
     status: "delete method execujted successfully",

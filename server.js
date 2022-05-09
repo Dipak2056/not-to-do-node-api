@@ -14,8 +14,10 @@ app.get("", (req, res) => {
 });
 //load rrouter
 import taskRouter from "./src/routers/taskRouter.js";
+import userRouter from "./src/routers/userRouter.js";
 //task api
 app.use("/api/v1/task/", taskRouter);
+app.use("/api/v1/user", userRouter);
 
 app.listen(PORT, (error) => {
   if (error) {
